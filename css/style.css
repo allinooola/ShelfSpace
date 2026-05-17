@@ -1,3 +1,6 @@
+/* =========================
+   INDEX HTML 
+========================= */
 body{
     font-family: Arial;
     background-color: #f5f1ea;
@@ -23,42 +26,162 @@ nav a:hover{
     transition: 0.3s;
 }
 
-/* ESTILO DA NAVBAR */
+
+/* ESTILO DO HEADER */
 header{
     background-color: #744E2F;
     padding: 20px;
 }
 
+
+/* ESTILO DA HERO SECTION */
 .hero{
     text-align: center;
-    padding: 120px 20px;
-    background-color: #a89e90;
+    padding: 70px 20px;
+    background-color: #b8b1a3;
 }
 
 .hero h1{
     font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
     color: white;
-    margin-bottom: 20px;
 }
+
+.hero p{
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* ESTILO DO BOTÃO PRINCIPAL */
+.botao-principal{
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #7f5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal:hover{
+    background-color: #9c6644;
+    transform: scale(1.05);
+}
+
+
+/* ESTILO DA CATEGORIAS */
+.categorias{
+    padding: 60px 20px;
+    background-color: #f5f1ea;
+    text-align: center; 
+}
+
+.categorias h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #4a3526;
+}
+
+/* ESTILO DO CAROUSEL */
+.carousel-container{
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ESTILO DAS CARDS */
 .cards{
     display: flex;
-    justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
+    overflow-x: hidden;
     text-align: center;
+    scroll-behavior: smooth;
+    padding: 30px 10px;
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
 }
 
 .card{
-    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    flex:0 0 250px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 18px;
     background-color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* EFEITO DE HOVER NAS CARDS */
+.card:hover{
+    transform: translate(-12px) scale(1.04);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.22);
+    z-index: 2;
 }
 
 .card img{
     width: 100%;
-    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+/* ESTILO DO CONTEÚDO DAS CARDS */
+.card h3{
+    color: #3e2c23;
+    margin-bottom: 10px;
+}
+
+/* ESTILO DO PARÁGRAFO DAS CARDS */
+.card p{
+    font-size: 15px;
+}
+
+
+/* SETINHAS */
+.seta{
+    border: none;
+    background-color: #7f5539;
+    color: white;
+    font-size: 28px;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.3s;
+
+}
+
+.seta:hover{
+    background-color: #9c6644;
+    transform: scale(1.1);
+}
+
+.esquerda{
+    margin-right: 15px;
+}
+
+.direita{
+    margin-left: 15px;
 }
 
 button{
@@ -75,3 +198,159 @@ button:hover{
     transition: 0.3s;
 }
 
+
+/* ESTILO DA SEÇÃO DE ATALHOS */
+.atalhos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 70px 20px;
+    background-color: #ede0d4;
+}
+
+.atalho{
+    width: 280px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+.atalho h3{
+    color: #3e2c23;
+}
+
+.atalho a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: #7f5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.atalho a:hover{
+    background-color: #9c6644;
+}
+
+
+/* RODAPÉ */
+footer{
+    text-align: center;
+    padding: 30px;
+    background-color: #7f5539;
+    color: white;
+}
+
+
+/* =========================
+   FORMS HTML 
+========================= */
+
+.form-section{
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.form-section h1,
+.form-section p{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label{
+    font-weight: bold;
+    color: #3e2c23;
+}
+
+form input,
+form select,
+form textarea{
+    padding: 12px;
+    border: 1px solid #c9b8a8;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+form textarea{
+    resize: none;
+}
+
+.checkbox-area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#mensagemErro{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+form button{
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #7f5539;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color: #9c6644;
+}
+
+
+/* =========================
+   REVIEWS HTML
+========================= */
+
+.page-title{
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.page-title h1{
+    font-size: 38px;
+    color: #3e2c23;
+}
+
+.review-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.review-card{
+    width: 280px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.chamada-review{
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ede0d4;
+}

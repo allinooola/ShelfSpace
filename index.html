@@ -18,7 +18,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="lidos.html">Lidos</a></li>
             <li><a href="lista.html">Lista de leitura</a></li>
-            <li><a href="form.html">Reviews</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
             <li><a href="about.html">Sobre</a></li>
         </ul>
     </nav>
@@ -34,14 +34,17 @@
     <p>
         Seu cantinho literário na internet.
     </p>
-    <h3>
-        Explorar Reviews
-    </h3>
+    <a href="reviews.html" class="botao-principal">Explorar Reviews</a>
 </section>
 
 
 <!-- CARDS SECTION -->
-<section class="cards">
+<section class="categorias">
+    <h2>Categorias Literárias</h2>
+
+<div class="carousel-container">
+    <button class="seta esquerda" onclick="scrollCarousel(-1)"><</button>
+<div class="cards" id="carousel">
 
 <!-- CARD 1 -->
 <div class="card">
@@ -96,37 +99,101 @@
         Desenvolva seu potencial.
     </p>
 </div>
+
+<!-- CARD 7 -->
+<div class="card">
+    <img src="images/livro7.jpg">
+    <h3>Fantasia</h3>
+    <p>
+        Entre em reinos mágicos e aventuras épicas.
+    </p>
+</div>
+
+<!-- CARD 8 -->
+<div class="card">
+    <img src="images/livro8.jpg">
+    <h3>Terror</h3>
+    <p>
+        Prepare-se para histórias sombrias e assustadoras.
+    </p>
+</div>
+
+<!-- CARD 9 -->
+<div class="card">
+    <img src="images/livro9.jpg">
+    <h3>Clássicos</h3>
+    <p>
+        Conheça obras marcantes que atravessaram gerações.
+    </p>
+</div>
+
+<!-- CARD 10 -->
+<div class="card">
+    <img src="images/livro10.jpg">
+    <h3>Poesia</h3>
+    <p>
+        Leia sentimentos transformados em palavras.
+    </p>
+</div>
+
+<!-- CARD 11 -->
+<div class="card">
+    <img src="images/livro11.jpg">
+    <h3>Drama</h3>
+    <p>
+        Explore histórias intensas, emocionantes e humanas.
+    </p>
+</div>
+
+<!-- CARD 12 -->
+<div class="card">
+    <img src="images/livro12.jpg">
+    <h3>Young Adult</h3>
+    <p>
+        Descubra histórias jovens, envolventes e cheias de descobertas.
+    </p>
+</div>
+
+</div>
+    <button class="seta direita" onclick="scrollCarousel(1)">></button>
+</div>
+
 </section>
 
-<!-- REVIEWS SECTION -->
-<section class="reviews">
-    <h3>Reviews</h3>
-    <button>
-        Ver Reviews
-    </button>
-</section>
+<!-- ATALHOS REVIEWS, LIVROS, AUTO-REVIEWS -->
 
-<!-- LIVROS SECTION -->
-<section class="livros">
-    <h3>Livros Favoritos</h3>
-    <button>
-        Ver Livros
-    </button>
-</section>
+<section class="atalhos">
 
-<!-- AUTO REVIEWS SECTION -->
-<section class="autoreviews">
-    <h3>Envie suas Reviews!</h3>
-    <button>
-        Criar Review
-    </button>
+    <div class="atalho">
+        <h3> Reviews </h3>
+        <p>Leia opiniões sobre livros já explorados </p>
+        <a href="reviews.html"> Ver Reviews </a>
+    </div>
+
+    <div class="atalho">
+        <h3> Livros Favoritos</h3>
+        <p> Conheça os livros que mais marcam essa biblioteca. </p>
+        <a href="lidos.html"> Ver Livros </a>
+    </div>
+
+    <div class="atalho">
+        <h3>Envie sua Review</h3>
+        <p>Compartilhe sua opinião sobre uma leitura especial.</p>
+        <a href="form.html">Criar Review</a>
+    </div>
+  
 </section>
 
     </main>
 
+    <!-- FOOTER/RODAPÉ -->
     <footer>
-        RODAPÉ
+        <p>📚 ShelfSpace — sua biblioteca digital</p>
+        <p>Desenvolvido por Lara Vitória • 2026</p>
     </footer>
+
+    <!-- JS JS JS JS -->    
+<script src="js/script.js"></script>
 
 </body>
 </html>
