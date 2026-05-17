@@ -1,0 +1,77 @@
+body{
+    font-family: Arial;
+    background-color: #f5f1ea;
+    margin: 0;
+}
+
+/* ESTILO DA NAVBAR */
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #bab8b6;
+    transition: 0.3s;
+}
+
+/* ESTILO DA NAVBAR */
+header{
+    background-color: #744E2F;
+    padding: 20px;
+}
+
+.hero{
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #a89e90;
+}
+
+.hero h1{
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.card{
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7f5539;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #9c6644;
+    transition: 0.3s;
+}
+
