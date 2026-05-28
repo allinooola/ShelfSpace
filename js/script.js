@@ -111,4 +111,60 @@ if (formulario) {
         }
     });
 }
-//commit teste 2
+
+
+// =========================
+// FORM ACTION - RECUPERAÇÃO DOS DADOS VIA GET
+// =========================
+
+// Seleciona o card de resultado — só executa se estiver na página formAction.html
+const resultadoCard = document.querySelector('.resultado-card');
+
+if (resultadoCard) {
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // URLSearchParams lê tudo que veio depois do "?" na URL
+        const params = new URLSearchParams(window.location.search);
+
+        // params.get() pega o valor de cada campo pelo name do formulário
+        const nome   = params.get("nome");
+        const email  = params.get("email");
+        const livro  = params.get("livro");
+        const autor  = params.get("autor");
+        const genero = params.get("genero");
+        const nota   = params.get("nota");
+        const review = params.get("review");
+
+        // Segurança: se não veio nenhum dado, avisa o usuário
+        if (!nome && !livro) {
+            resultadoCard.innerHTML =
+                '<div class="aviso-erro">' +
+                '<p>Nenhum dado encontrado.</p>' +
+                '<p><a href="form.html">Voltar ao formulário</a></p>' +
+                '</div>';
+            return;
+        }
+
+        // getElementById + innerHTML 
+        document.getElementById("resultado-nome").innerHTML   = nome;
+        document.getElementById("resultado-email").innerHTML  = email;
+        document.getElementById("resultado-livro").innerHTML  = livro;
+        document.getElementById("resultado-autor").innerHTML  = autor;
+        document.getElementById("resultado-genero").innerHTML = genero;
+        document.getElementById("resultado-review").innerHTML = review;
+
+        // Transforma a nota em estrelinhas usando laço for
+        const notaNumero = parseInt(nota);
+        let estrelas = "";
+        for (let i = 1; i <= 5; i++) {
+            if (i <= notaNumero) {
+                estrelas += "★";
+            } else {
+                estrelas += "☆";
+            }
+        }
+        document.getElementById("resultado-nota").innerHTML = estrelas + " (" + notaNumero + "/5)";
+
+    });
+}

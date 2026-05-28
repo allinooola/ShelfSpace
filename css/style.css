@@ -484,3 +484,103 @@ form button:hover{
     object-fit: cover;
     border: 3px solid #744E2F;
 }
+
+/* =========================
+   FORM ACTION PAGE
+========================= */
+
+.resultado-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #b8b1a3;
+}
+
+.resultado-hero h1 {
+    font-size: 42px;
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.resultado-hero p {
+    font-size: 18px;
+    color: white;
+}
+
+.resultado-content {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.resultado-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+.resultado-card h2 {
+    font-size: 22px;
+    color: #4a3526;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.campo-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0e8df;
+}
+
+.campo-resultado:last-of-type {
+    border-bottom: none;
+}
+
+.campo-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #9c6644;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.campo-valor {
+    font-size: 16px;
+    color: #3e2c23;
+}
+
+.estrelas {
+    color: #f5a623;
+    font-size: 20px;
+}
+
+.aviso-erro {
+    text-align: center;
+    padding: 40px;
+    color: #9c6644;
+}
+
+.botao-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botao-voltar a {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #7f5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-voltar a:hover {
+    background-color: #9c6644;
+    transform: scale(1.05);
+}
