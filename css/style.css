@@ -354,3 +354,133 @@ form button:hover{
     padding: 60px 20px;
     background-color: #ede0d4;
 }
+
+/* =========================
+   ABOUT PAGE 
+========================= */
+.about-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #b8b1a3;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: white;
+}
+
+.about-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+.about-card h2 {
+    font-size: 24px;
+    color: #4a3526;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.tech-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tech-badge {
+    background-color: #f5f1ea;
+    border: 2px solid #744E2F;
+    color: #744E2F;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.autora-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #744E2F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.autora-texto p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.curiosidade-lista {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.curiosidade-lista li {
+    font-size: 16px;
+    color: #555;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.curiosidade-lista li::before {
+    content: "📖";
+    position: absolute;
+    left: 0;
+}
+
+
+.foto-autora {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #744E2F;
+}
