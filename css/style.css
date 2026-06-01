@@ -3,7 +3,7 @@
 ========================= */
 body{
     font-family: Arial;
-    background-color: #f5f1ea;
+    background-color: #9c7756;
     margin: 0;
 }
 
@@ -39,7 +39,7 @@ header{
 /* ESTILO DA HERO SECTION */
 .hero {
     text-align: center;
-    padding: 70px 20px;
+    padding: 70px 20px 140px;
     background-image: url('../images/fundohero.jpg');
     background-size: cover;
     background-position: center;
@@ -277,88 +277,110 @@ footer{
 /*--------------------------------------------------------------------------------------------------------------------------
 
 /* =========================
-   LIDOS PAGE SEGUNDA PÁGINA (2)
+   LIDOS PAGE
 ========================= */
- 
+
 .hero-lidos {
+    font-family: 'Merriweather', serif;
     text-align: center;
-    padding: 60px 20px 40px;
-    background-color: #b8b1a3;
+    padding: 60px 20px 140px;
+    background-image: url('../images/herolidos.jpg');
+    background-size: cover;
+    background-color: #744E2F;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
 }
- 
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 200%; height: 200%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
 .hero-lidos h1 {
     font-size: 42px;
-    color: white;
+    color: rgb(234, 210, 210);
     letter-spacing: 3px;
     margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
 }
- 
+
 .hero-lidos p {
     font-size: 18px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
- 
+
 .lidos-section {
     max-width: 1300px;
     margin: 0 auto;
     padding: 50px 20px;
 }
- 
+
 .lidos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 25px;
 }
- 
+
 .lido-card {
-    background: white;
+    background: rgb(244, 223, 208);
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(0,0,0,0.10);
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
- 
+
 .lido-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 28px rgba(0,0,0,0.18);
 }
- 
+
 .lido-card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
+    object-position: top;
 }
- 
+
 .lido-info {
     padding: 14px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
- 
+
 .lido-info h3 {
     font-size: 14px;
     color: #3e2c23;
     margin: 0;
     line-height: 1.4;
+    font-family: 'Merriweather', serif;
 }
- 
+
 .lido-autor {
     font-size: 12px;
     color: #9c6644;
 }
- 
+
 .lido-nota {
     font-size: 13px;
     color: #f5a623;
     font-weight: bold;
 }
- 
+
 /* =========================
    MODAL DOS LIVROS
 ========================= */
- 
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -369,9 +391,9 @@ footer{
     justify-content: center;
     align-items: center;
 }
- 
+
 .modal-box {
-    background: white;
+    background: #f5f1ea;
     border-radius: 18px;
     padding: 30px;
     max-width: 700px;
@@ -381,7 +403,7 @@ footer{
     overflow-y: auto;
     box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
- 
+
 .modal-fechar {
     position: absolute;
     top: 15px; right: 15px;
@@ -393,18 +415,19 @@ footer{
     font-size: 14px;
     cursor: pointer;
     transition: background 0.2s;
+    padding: 0;
 }
- 
+
 .modal-fechar:hover {
     background: #9c6644;
 }
- 
+
 .modal-conteudo {
     display: flex;
     gap: 25px;
     align-items: flex-start;
 }
- 
+
 #modal-capa {
     width: 140px;
     height: 210px;
@@ -413,34 +436,35 @@ footer{
     flex-shrink: 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
- 
+
 .modal-texto {
     flex: 1;
 }
- 
+
 .modal-texto h2 {
     font-size: 20px;
     color: #3e2c23;
     margin-bottom: 6px;
     line-height: 1.3;
+    font-family: 'Merriweather', serif;
 }
- 
+
 .modal-autor-texto {
     font-size: 14px;
     color: #9c6644;
     margin-bottom: 8px;
 }
- 
+
 .modal-nota-estrelas {
     font-size: 16px;
     color: #f5a623;
     font-weight: bold;
     margin-bottom: 15px;
 }
- 
+
 .modal-sinopse-texto {
     font-size: 15px;
-    color: #555;
+    color: #4a3526;
     line-height: 1.8;
 }
 
@@ -458,13 +482,29 @@ footer{
 ========================= */
 
 .page-title{
+    font-family: 'Merriweather', serif;
     text-align: center;
-    padding: 60px 20px 30px;
+    padding: 60px 20px 200px;
+    background-image: url('../images/comments.png');
+    background-size: cover;
+    background-color: #744E2F;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
 }
 
-.page-title h1{
-    font-size: 38px;
-    color: #3e2c23;
+.page-title::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.page-title h1,
+.page-title p {
+    position: relative;
+    z-index: 1;
+    color: white;
 }
 
 .review-list{
@@ -484,9 +524,9 @@ footer{
 }
 
 .chamada-review{
+    font: bold 16px 'Merriweather', serif;
     text-align: center;
     padding: 60px 20px;
-    background-color: #ede0d4;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
@@ -570,9 +610,28 @@ form button:hover{
 ========================= */
 
 .resultado-hero {
+    font-family: 'Merriweather', serif;
     text-align: center;
-    padding: 60px 20px 40px;
-    background-color: #b8b1a3;
+    padding: 60px 20px 140px;
+    background-image: url('../images/reviewrecebida.jpg');
+    background-size: cover;
+    background-color: #744E2F;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
+}
+
+.resultado-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.resultado-hero h1,
+.resultado-hero p {
+    position: relative;
+    z-index: 1;
 }
 
 .resultado-hero h1 {
@@ -673,8 +732,26 @@ form button:hover{
 ========================= */
 .about-hero {
     text-align: center;
-    padding: 60px 20px 40px;
-    background-color: #b8b1a3;
+    padding: 60px 20px 140px;
+    background-image: url('../images/sobre.jpg');
+    background-size: cover;
+    background-color: #744E2F;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.about-hero h1,
+.about-hero p {
+    position: relative;
+    z-index: 1;
 }
 
 .about-hero h1 {
