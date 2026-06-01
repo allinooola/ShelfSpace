@@ -2,7 +2,7 @@
    INDEX HTML PÁGINA PRINCIPAL (1)
 ========================= */
 body{
-    font-family: Arial;
+    font-family: 'Merriweather', serif;
     background-color: #9c7756;
     margin: 0;
 }
@@ -39,7 +39,7 @@ header{
 /* ESTILO DA HERO SECTION */
 .hero {
     text-align: center;
-    padding: 70px 20px 140px;
+    padding: 70px 20px 80px;
     background-image: url('../images/fundohero.jpg');
     background-size: cover;
     background-position: center;
@@ -291,16 +291,16 @@ footer{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
 }
 
-.hero::before {
+.hero-lidos::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
-    width: 200%; height: 200%;
-    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%; height: 100%;
+    background-color: rgba(130, 104, 104, 0.085);
 }
 
-.hero h1,
-.hero p {
+.hero-lidos h1,
+.hero-lidos p {
     position: relative;
     z-index: 1;
 }
@@ -474,6 +474,130 @@ footer{
    LISTA DE LEITURA TERCEIRA PÁGINA (3) 
 ========================= */
 
+.hero-lista {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    padding: 60px 20px 140px;
+    background-image: url('../images/listaleitura.jpg');
+    background-size: cover;
+    background-color: #744E2F;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
+}
+
+.hero-lista::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-lista h1,
+.hero-lista p {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-lista h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero-lista p {
+    font-size: 18px;
+}
+
+.lista-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.lista-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.lista-grupo {
+    background: rgb(244, 223, 208);
+    border-radius: 18px;
+    padding: 30px 35px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+.lista-grupo-titulo {
+    font-size: 20px;
+    color: #4a3526;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    border-bottom: 2px solid #c9b8a8;
+    padding-bottom: 12px;
+}
+
+.lista-livros {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 18px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+}
+
+.lista-item:hover {
+    transform: translateX(6px);
+}
+
+.lista-numero {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9c6644;
+    font-family: 'Merriweather', serif;
+    min-width: 30px;
+}
+
+.lista-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.lista-titulo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #3e2c23;
+}
+
+.lista-autor {
+    font-size: 13px;
+    color: #9c6644;
+}
+
+.lista-genero {
+    font-size: 12px;
+    background: #f5f1ea;
+    border: 1px solid #c9b8a8;
+    color: #744E2F;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: bold;
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------
 
@@ -731,6 +855,7 @@ form button:hover{
    ABOUT PAGE ULTIMA PÁGINA (5)
 ========================= */
 .about-hero {
+    font-family: 'Merriweather', serif;
     text-align: center;
     padding: 60px 20px 140px;
     background-image: url('../images/sobre.jpg');
