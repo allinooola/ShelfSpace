@@ -1,10 +1,14 @@
-function scrollCarousel(direcao){
+function scrollCarousel(direcao) {
     const carousel = document.getElementById("carousel");
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
 
-    carousel.scrollBy({
-        left: direcao * 300,
-        behavior: "smooth"
-    });
+    if (direcao > 0 && carousel.scrollLeft >= maxScroll - 5) {
+        carousel.scrollLeft = 0;
+    } else if (direcao < 0 && carousel.scrollLeft <= 5) {
+        carousel.scrollLeft = maxScroll;
+    } else {
+        carousel.scrollBy({ left: direcao * 300, behavior: "smooth" });
+    }
 }
 
 // =========================
