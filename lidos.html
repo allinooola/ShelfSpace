@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidos | ShelfSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lidos.html">Lidos</a></li>
+            <li><a href="lista.html">Lista de leitura</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="about.html">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero-lidos">
+        <h1>Livros Lidos</h1>
+        <p>Todos os livros que já passaram por aqui — com sinopse e nota.</p>
+    </section>
+
+    <!-- GRID DE LIVROS -->
+    <section class="lidos-section">
+
+        <div class="lidos-grid">
+
+            <!-- HARRY POTTER -->
+            <div class="lido-card" onclick="abrirModal('hp1')">
+                <img src="images/hp1.jpg" alt="Harry Potter e a Pedra Filosofal">
+                <div class="lido-info">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★☆ 4,47/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp2')">
+                <img src="images/hp2.jpg" alt="Harry Potter e a Câmara Secreta">
+                <div class="lido-info">
+                    <h3>Harry Potter e a Câmara Secreta</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★☆ 4,43/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp3')">
+                <img src="images/hp3.jpg" alt="Harry Potter e o Prisioneiro de Azkaban">
+                <div class="lido-info">
+                    <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★★ 4,58/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp4')">
+                <img src="images/hp4.jpg" alt="Harry Potter e o Cálice de Fogo">
+                <div class="lido-info">
+                    <h3>Harry Potter e o Cálice de Fogo</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★★ 4,57/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp5')">
+                <img src="images/hp5.jpg" alt="Harry Potter e a Ordem da Fênix">
+                <div class="lido-info">
+                    <h3>Harry Potter e a Ordem da Fênix</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★★ 4,50/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp6')">
+                <img src="images/hp6.jpg" alt="Harry Potter e o Enigma do Príncipe">
+                <div class="lido-info">
+                    <h3>Harry Potter e o Enigma do Príncipe</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★★ 4,58/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hp7')">
+                <img src="images/hp7.jpg" alt="Harry Potter e as Relíquias da Morte">
+                <div class="lido-info">
+                    <h3>Harry Potter e as Relíquias da Morte</h3>
+                    <span class="lido-autor">J.K. Rowling</span>
+                    <span class="lido-nota">★★★★★ 4,62/5</span>
+                </div>
+            </div>
+
+            <!-- OUTROS -->
+            <div class="lido-card" onclick="abrirModal('jantarsec')">
+                <img src="images/jantarsec.jpg" alt="Jantar Secreto">
+                <div class="lido-info">
+                    <h3>Jantar Secreto</h3>
+                    <span class="lido-autor">Raphael Montes</span>
+                    <span class="lido-nota">★★★★☆ 4,10/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('eros1')">
+                <img src="images/eros1.jpg" alt="Eros: À Primeira Vista">
+                <div class="lido-info">
+                    <h3>Eros: À Primeira Vista</h3>
+                    <span class="lido-autor">Ruth Oliveira</span>
+                    <span class="lido-nota">★★★★★ 4,50/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('eros2')">
+                <img src="images/eros2.jpg" alt="Eros: Em Todas as Nuances">
+                <div class="lido-info">
+                    <h3>Eros: Em Todas as Nuances</h3>
+                    <span class="lido-autor">Ruth Oliveira</span>
+                    <span class="lido-nota">★★★★★ 4,60/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('cc1')">
+                <img src="images/cc1.jpg" alt="Cem Chances: Posição Inicial">
+                <div class="lido-info">
+                    <h3>Cem Chances: Posição Inicial</h3>
+                    <span class="lido-autor">Ruth Oliveira</span>
+                    <span class="lido-nota">★★★★★ 4,65/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('cc2')">
+                <img src="images/cc2.jpg" alt="Cem Chances: Tempo Regressivo">
+                <div class="lido-info">
+                    <h3>Cem Chances: Tempo Regressivo</h3>
+                    <span class="lido-autor">Ruth Oliveira</span>
+                    <span class="lido-nota">★★★★★ 4,62/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('cc3')">
+                <img src="images/cc3.jpg" alt="Cem Chances: Frequência Final">
+                <div class="lido-info">
+                    <h3>Cem Chances: Frequência Final</h3>
+                    <span class="lido-autor">Ruth Oliveira</span>
+                    <span class="lido-nota">★★★★★ 4,70/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('croack')">
+                <img src="images/croack.jpg" alt="Croack!">
+                <div class="lido-info">
+                    <h3>Croack!: Um Eco de Resistência</h3>
+                    <span class="lido-autor">Mel Ikus</span>
+                    <span class="lido-nota">★★★★☆ 4,30/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('comoeraantes')">
+                <img src="images/comoeraantes.jpg" alt="Como Eu Era Antes de Você">
+                <div class="lido-info">
+                    <h3>Como Eu Era Antes de Você</h3>
+                    <span class="lido-autor">Jojo Moyes</span>
+                    <span class="lido-nota">★★★★☆ 4,27/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('eassimqueacaba')">
+                <img src="images/eassimqueacaba.jpg" alt="É Assim que Acaba">
+                <div class="lido-info">
+                    <h3>É Assim que Acaba</h3>
+                    <span class="lido-autor">Colleen Hoover</span>
+                    <span class="lido-nota">★★★★☆ 4,07/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('eassimquecomeça')">
+                <img src="images/eassimquecomeça.jpg" alt="É Assim que Começa">
+                <div class="lido-info">
+                    <h3>É Assim que Começa</h3>
+                    <span class="lido-autor">Colleen Hoover</span>
+                    <span class="lido-nota">★★★★☆ 3,89/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('umasegundachance')">
+                <img src="images/umasegundachance.jpg" alt="Uma Segunda Chance">
+                <div class="lido-info">
+                    <h3>Uma Segunda Chance</h3>
+                    <span class="lido-autor">Colleen Hoover</span>
+                    <span class="lido-nota">★★★★★ 4,56/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('assassinato')">
+                <img src="images/assassinato.jpg" alt="Assassinato no Expresso do Oriente">
+                <div class="lido-info">
+                    <h3>Assassinato no Expresso do Oriente</h3>
+                    <span class="lido-autor">Agatha Christie</span>
+                    <span class="lido-nota">★★★★☆ 4,20/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('enaosobrou')">
+                <img src="images/enaosobrou.jpg" alt="E Não Sobrou Nenhum">
+                <div class="lido-info">
+                    <h3>E Não Sobrou Nenhum</h3>
+                    <span class="lido-autor">Agatha Christie</span>
+                    <span class="lido-nota">★★★★☆ 4,28/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('letargia')">
+                <img src="images/letargia.jpg" alt="Letargia">
+                <div class="lido-info">
+                    <h3>Letargia</h3>
+                    <span class="lido-autor">Triz Parizotto</span>
+                    <span class="lido-nota">★★★★★ 5/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('hipotese')">
+                <img src="images/hipotese.jpg" alt="A Hipótese do Amor">
+                <div class="lido-info">
+                    <h3>A Hipótese do Amor</h3>
+                    <span class="lido-autor">Ali Hazelwood</span>
+                    <span class="lido-nota">★★★★★ 5/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('amorteoricamente')">
+                <img src="images/amorteoricamente.jpg" alt="Amor, Teoricamente">
+                <div class="lido-info">
+                    <h3>Amor, Teoricamente</h3>
+                    <span class="lido-autor">Ali Hazelwood</span>
+                    <span class="lido-nota">★★★★★ 5/5</span>
+                </div>
+            </div>
+
+            <div class="lido-card" onclick="abrirModal('principecruel')">
+                <img src="images/principecruel.jpg" alt="O Príncipe Cruel">
+                <div class="lido-info">
+                    <h3>O Príncipe Cruel</h3>
+                    <span class="lido-autor">Holly Black</span>
+                    <span class="lido-nota">★★★★★ 5/5</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal-livro" class="modal-overlay" onclick="fecharModal(event)">
+        <div class="modal-box">
+            <button class="modal-fechar" onclick="fecharModal()">✕</button>
+            <div class="modal-conteudo">
+                <img id="modal-capa" src="" alt="">
+                <div class="modal-texto">
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-autor" class="modal-autor-texto"></p>
+                    <p id="modal-nota" class="modal-nota-estrelas"></p>
+                    <p id="modal-sinopse" class="modal-sinopse-texto"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>📚 ShelfSpace — sua biblioteca digital</p>
+    <p>Desenvolvido por Lara Vitória • 2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
