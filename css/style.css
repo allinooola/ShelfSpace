@@ -57,11 +57,19 @@ header{
 }
 
 /* GARANTE QUE O TEXTO FIQUE ACIMA DA SOBREPOSIÇÃO */
+.hero h3,
 .hero h1,
 .hero p,
 .hero a {
     position: relative;
     z-index: 1;
+}
+
+.hero h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Merriweather', serif;
 }
 
 .hero h1{
