@@ -1007,3 +1007,80 @@ form button:hover{
     object-fit: cover;
     border: 3px solid #744E2F;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------
+/* =========================
+   LOGIN PHP (1) 
+   INICIO DO PHP - CSS
+========================= */
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/fundohero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.login-hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.45);
+}
+
+.login-card{
+    position: relative;
+    z-index: 1;
+    width: 430px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.login-card h1{
+    text-align: center;
+    color: #4a3526;
+    margin-bottom: 10px;
+}
+
+.login-card p{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-card a{
+    color: #744E2F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-card a:hover{
+    color: #9c6644;
+}
+
+.voltar-home{
+    text-align: center;
+    top: 30px;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.voltar-home:hover{
+    color: #d8b89b;
+}
