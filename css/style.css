@@ -1070,17 +1070,30 @@ form button:hover{
     color: #9c6644;
 }
 
-.voltar-home{
-    text-align: center;
-    top: 30px;
-    left: 30px;
-    color: white;
+.voltar-home {
+    display: block;
+    text-align: left;
+    color: #9c6644;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 2;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-.voltar-home:hover{
-    color: #d8b89b;
+.voltar-home:hover {
+    color: #744E2F;
+}
+/* =========================
+   CADASTRO PAGE
+========================= */
+.voltar-login {
+    display: block;
+    text-align: left;
+    color: #9c6644;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.voltar-login:hover {
+    color: #744E2F;
 }

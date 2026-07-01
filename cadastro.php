@@ -12,11 +12,22 @@ session_start();
 </head>
 
 <body>
+    <!-- REUTILIZAÇÃO DO LAYOUT DE LOGIN PARA CADASTRO -->
     <section class="login-hero">
         <div class="login-card">
-            <a href="index.php" class="voltar-home"> Voltar para a Home</a>
             <h1>SHELFSPACE 📚</h1>
             <p>Crie sua conta para começar a compartilhar suas leituras.</p>
+
+            <!-- Exibe mensagens de ERRO, se houver -->
+            <?php if (isset($_GET['erro'])): ?>
+                <?php if ($_GET['erro'] == 'senhas_diferentes'): ?>
+                    <p style="color:red; text-align:center;">As senhas não coincidem!</p>
+                <?php elseif ($_GET['erro'] == 'email_existe'): ?>
+                    <p style="color:red; text-align:center;">Este email já está cadastrado!</p>
+                <?php else: ?>
+                    <p style="color:red; text-align:center;">Erro ao cadastrar. Tente novamente.</p>
+                <?php endif; ?>
+            <?php endif; ?>
 
             <form action="cadastrar.php" method="POST">
                 <label for="nome">Nome:</label>
@@ -53,7 +64,7 @@ session_start();
 
                 <button type="submit">Criar conta</button>
             </form>
-            
+            <a href="login.php" class="voltar-login"> Já tem uma conta? Faça login </a>
         </div>
     </section>
 </body>

@@ -14,11 +14,20 @@ session_start();
 <body>
     <section class="login-hero">
         <div class="login-card">
-            <a href="index.php" class="voltar-home"> Voltar para a Home</a>
+            <a href="index.php" class="voltar-home">Home</a>
             <h1>SHELFSPACE 📚</h1>
             <p>Bem-vindo! Faça login para continuar.</p>
 
-            <form action="authenticar.php" method="POST">
+            <!-- Exibe mensagens de SUCESSO no login e ERRO no login -->
+            <?php if (isset($_GET['sucesso'])): ?>
+                <p style="color:green; text-align:center;">Conta criada! Faça login.</p>
+            <?php endif; ?>
+
+            <?php if (isset($_GET['erro'])): ?>
+                <p style="color:red; text-align:center;">Email ou senha inválidos!</p>
+            <?php endif; ?>
+
+            <form action="autenticar.php" method="POST">
                 <label for="email">Email:</label>
                 <input
                     type="email"
@@ -35,7 +44,7 @@ session_start();
                     required>
                 <button type="submit">Entrar</button>
             </form>
-            
+
             <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
         </div>
     </section>
