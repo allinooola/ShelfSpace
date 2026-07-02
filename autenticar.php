@@ -2,16 +2,11 @@
 session_start();
 require "conexao.php";
 
-// =========================
 // RECEBE OS DADOS DO FORMULÁRIO VIA POST
-// Igual ao exemplo da aula: $_POST["campo"]
-// =========================
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-// =========================
 // BUSCA O USUÁRIO NO BANCO PELO EMAIL
-// =========================
 $sql = "SELECT id_usuario, nome, senha, tipo FROM usuario WHERE email = '$email'";
 $resultado = mysqli_query($conexao, $sql);
 
@@ -21,14 +16,10 @@ if (mysqli_num_rows($resultado) == 1) {
     // Pega os dados do usuário encontrado
     $usuario = mysqli_fetch_assoc($resultado);
 
-    // =========================
     // VERIFICA A SENHA
-    // password_verify() compara a senha digitada com o hash salvo no banco
-    // =========================
     if (password_verify($senha, $usuario["senha"])) {
 
-        // Senha correta! Inicia as variáveis de sessão
-        // Igual ao exemplo da aula: $_SESSION["variavel"] = valor
+        // Se a senha estiver certa, inicia as variáveis de sessão
         $_SESSION["id_usuario"]  = $usuario["id_usuario"];
         $_SESSION["nome"]        = $usuario["nome"];
         $_SESSION["tipo"]        = $usuario["tipo"];
@@ -38,7 +29,7 @@ if (mysqli_num_rows($resultado) == 1) {
         exit();
 
     } else {
-        // Senha errada — volta para o login com erro
+        // Senha errada: volta para o login com erro
         header("Location: login.php?erro=senha_invalida");
         exit();
     }

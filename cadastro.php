@@ -64,7 +64,7 @@ session_start();
 
                 <button type="submit">Criar conta</button>
             </form>
-            <a href="login.php" class="voltar-login"> Já tem uma conta? Faça login </a>
+            <p> Já possui uma conta? <a href="login.php">Faça login</a> </p>
         </div>
     </section>
 </body>
