@@ -14,7 +14,6 @@ session_start();
 <body>
     <section class="login-hero">
         <div class="login-card">
-            <a href="index.php" class="voltar-home">Home</a>
             <h1>SHELFSPACE 📚</h1>
             <p>Bem-vindo! Faça login para continuar.</p>
 

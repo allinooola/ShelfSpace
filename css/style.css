@@ -28,6 +28,15 @@ nav a:hover{
     transition: 0.3s;
 }
 
+.logout {
+    text-decoration: none;
+    color:#bab8b6
+}   
+
+.logout:hover {
+    color: #080808;
+    transition: 0.3s;
+}
 
 /* ESTILO DO HEADER */
 header{
@@ -1015,7 +1024,7 @@ form button:hover{
 ========================= */
 
 /* =========================
-   LOGIN E CADASTRO PAGES
+   LOGIN E CADASTRO PAGE
 ========================= */
 
 .login-hero{
