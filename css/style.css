@@ -619,7 +619,7 @@ footer{
 /*--------------------------------------------------------------------------------------------------------------------------
 
 /* =========================
-   REVIEWS HTML QUARTA PÁGINA (4)
+   REVIEWS E EXIBIÇÃO DOS INSERTS QUARTA PÁGINA (4)
 ========================= */
 
 .page-title{
@@ -662,8 +662,43 @@ footer{
     padding: 25px;
     border-radius: 18px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s ease;
 }
 
+.review-card:hover{
+    transform: translateY(-5px);
+}
+
+.review-card h3{
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    color: #2c1e12;
+    margin: 0;
+}
+
+.review-autor-livro{
+    font-size: 14px;
+    color: #8a8a8a;
+    font-style: italic;
+    margin: 0;
+}
+
+.review-card p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.review-por{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #744E2F;
+    font-weight: bold;
+}
 .chamada-review{
     font: bold 16px 'Merriweather', serif;
     text-align: center;
@@ -674,7 +709,7 @@ footer{
 
 
 /* =========================
-   FORMS HTML QUE VEM DA PAG DE REVIEWS
+   FORM PHP (PÁGINA 4.1 porque é uma subpágina da página de reviews)
 ========================= */
 
 .form-section{
@@ -743,128 +778,6 @@ form button{
 form button:hover{
     background-color: #9c6644;
 }
-
-/*----------------------------------------------------------------------------------------------------------------------
-
-/* =========================
-   FORM ACTION PAGE QUE VEM DA PAG DE REVIEWS E VALIDAÇÃO DE DADOS
-========================= */
-
-.resultado-hero {
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    padding: 60px 20px 140px;
-    background-image: url('../images/reviewrecebida.jpg');
-    background-size: cover;
-    background-color: #744E2F;
-    position: relative;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.812);
-}
-
-.resultado-hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-}
-
-.resultado-hero h1,
-.resultado-hero p {
-    position: relative;
-    z-index: 1;
-}
-
-.resultado-hero h1 {
-    font-size: 42px;
-    color: white;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.resultado-hero p {
-    font-size: 18px;
-    color: white;
-}
-
-.resultado-content {
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.resultado-card {
-    background-color: white;
-    border-radius: 18px;
-    padding: 40px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-}
-
-.resultado-card h2 {
-    font-size: 22px;
-    color: #4a3526;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.campo-resultado {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 14px 0;
-    border-bottom: 1px solid #f0e8df;
-}
-
-.campo-resultado:last-of-type {
-    border-bottom: none;
-}
-
-.campo-label {
-    font-size: 12px;
-    font-weight: bold;
-    color: #9c6644;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.campo-valor {
-    font-size: 16px;
-    color: #3e2c23;
-}
-
-.estrelas {
-    color: #f5a623;
-    font-size: 20px;
-}
-
-.aviso-erro {
-    text-align: center;
-    padding: 40px;
-    color: #9c6644;
-}
-
-.botao-voltar {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.botao-voltar a {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: #7f5539;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.botao-voltar a:hover {
-    background-color: #9c6644;
-    transform: scale(1.05);
-}
-
 
 /*----------------------------------------------------------------------------------------------------------------------
 

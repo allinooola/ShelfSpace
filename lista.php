@@ -27,6 +27,7 @@ if (!isset($_SESSION['id_usuario'])) {
             <li><a href="reviews.php">Reviews</a></li>
             <li><a href="about.php">Sobre</a></li>
             <li><a href="#" class="nav-conta">Minha Conta</a></li>
+            <li><a href="logout.php" class="logout" onclick="return confirm('Tem certeza de que deseja sair?')"> Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -36,7 +37,7 @@ if (!isset($_SESSION['id_usuario'])) {
     <!-- HERO -->
     <section class="hero-lista">
         <h1>Lista de Leitura</h1>
-        <p>Os livros que estão esperando na fila — logo, logo chegam!</p>
+        <p>Os títulos que mais aparecem nas listas de leitura dos nossos leitores.</p>
     </section>
 
     <!-- LISTA DE LIVROS -->

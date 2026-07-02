@@ -28,6 +28,7 @@ if (!isset($_SESSION['id_usuario'])) {
             <li><a href="reviews.php">Reviews</a></li>
             <li><a href="about.php">Sobre</a></li>
             <li><a href="#" class="nav-conta">Minha Conta</a></li>
+            <li><a href="logout.php" class="logout" onclick="return confirm('Tem certeza de que deseja sair?')"> Logout</a></li>
         </ul>
     </nav>
 </header>

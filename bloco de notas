@@ -1,16 +1,14 @@
 falta fazer:
 
-conferir se todos os diretorios estao para .php
+conferir se todos os diretorios estao para .php - OK
 
-ajeitar a navbar de todas as paginas para .php
+ajeitar a navbar de todas as paginas para .php - OK
 
 linha de raciocinio:
 usuario escreve a review
 o resumo da review que o usuario fez é mostrada para ele via get com tudo o que ele escreveu
-salvar essa review em php e mandar para o admin no banco de dados
-o admin vai dar como autorizada ou negada
+salvar essa review em php
 review vai automaticamente para a pagina de reviews.php para ser listada como uma review comentada normal 
-
 
 
 colocar no index.php o "ola [nome] bem vindo ao shelfspace" personalizado de acordo com login
@@ -40,3 +38,7 @@ Redirecionar para uma página dizendo "Sua review foi enviada para análise".
 💡 Minha sugestão é que a gente faça isso bem parecido com o cadastro de usuário, porque você já entendeu aquela lógica. Vai ficar muito mais fácil e o código vai manter o mesmo padrão do resto do projeto.
 
 Acho que é a melhor sequência para não se perder.
+
+CONSIDERAR EXCLUIR O FORM.ACTION QUE EXIBE A REVIEW ESCRITA
+
+AJEITAR CSS DO REVIEWS PHP - SUBSTITUIR PELO FORM.ACTION

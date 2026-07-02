@@ -28,6 +28,7 @@ if (!isset($_SESSION['id_usuario'])) {
             <li><a href="reviews.php">Reviews</a></li>
             <li><a href="about.php">Sobre</a></li>
             <li><a href="#" class="nav-conta">Minha Conta</a></li>
+            <li><a href="logout.php" class="logout" onclick="return confirm('Tem certeza de que deseja sair?')"> Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -39,13 +40,7 @@ if (!isset($_SESSION['id_usuario'])) {
         <h1>Envie sua Review</h1>
         <p>Compartilhe sua opinião sobre um livro que marcou sua leitura.</p>
 
-        <form id="reviewForm" action="formAction.php" method="GET">
-
-            <label for="nome">Seu nome:</label>
-            <input type="text" id="nome" name="nome">
-
-            <label for="email">Seu e-mail:</label>
-            <input type="email" id="email" name="email">
+        <form id="reviewForm" action="salvarReview.php" method="POST">
 
             <label for="livro">Título do livro:</label>
             <input type="text" id="livro" name="livro">

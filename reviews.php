@@ -1,22 +1,13 @@
 <?php
-// PASSO 1: toda página que precisa de login começa com isso.
-// session_start() "liga" a sessão pra gente poder checar quem está logado.
 session_start();
- 
-// Se NÃO existir a variável id_usuario na sessão, quer dizer que
-// a pessoa não fez login. Então mandamos ela pro login e paramos
-// tudo com exit() (nada depois disso é executado).
+
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit();
 }
- 
-// PASSO 2: conectar no banco (arquivo que você já tem pronto)
+
 require "conexao.php";
  
-// PASSO 3: perguntar ao banco quais reviews estão aprovadas.
-// Também já aproveitamos e buscamos o nome de quem escreveu,
-// juntando (JOIN) com a tabela usuario pelo id_usuario.
 $sql = "SELECT review.id_review, review.nome_livro, review.autor,
                review.nota, review.comentario, review.data_review,
                usuario.nome AS nome_usuario
@@ -50,6 +41,7 @@ $resultado = mysqli_query($conexao, $sql);
             <li><a href="form.php">Enviar Review</a></li>
             <li><a href="about.php">Sobre</a></li>
             <li><a href="#" class="nav-conta">Minha Conta</a></li>
+            <li><a href="logout.php" class="logout" onclick="return confirm('Tem certeza de que deseja sair?')"> Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -61,33 +53,9 @@ $resultado = mysqli_query($conexao, $sql);
         <p>Veja algumas opiniões sobre livros que fazem parte da nossa estante.</p>
     </section>
 
-    <section class="review-list">
-
-        <div class="review-card">
-            <h3>A Biblioteca da Meia-Noite</h3>
-            <p><strong>Nota:</strong> ⭐⭐⭐⭐</p>
-            <p>Uma leitura reflexiva sobre escolhas, arrependimentos e possibilidades de vida.</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Jogos Vorazes</h3>
-            <p><strong>Nota:</strong> ⭐⭐⭐⭐⭐</p>
-            <p>Uma história envolvente, com crítica social e personagens marcantes.</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Orgulho e Preconceito</h3>
-            <p><strong>Nota:</strong> ⭐⭐⭐⭐⭐</p>
-            <p>Um clássico cheio de ironia, romance e personagens memoráveis.</p>
-        </div>
-
-    </section>
-
+    <div class="review-list">
         <?php
-        // PASSO 4: para cada linha que o banco devolveu, desenha um card.
-        // mysqli_fetch_assoc pega "uma linha por vez" do resultado,
-        // até acabar (o while para quando não tem mais linha).
- 
+        // Verifica se há reviews aprovadas e exibe cada uma delas
         if (mysqli_num_rows($resultado) > 0) {
  
             while ($review = mysqli_fetch_assoc($resultado)) {
@@ -112,7 +80,8 @@ $resultado = mysqli_query($conexao, $sql);
             echo "<p>Ainda não há reviews aprovadas por aqui. Seja a primeira a escrever uma!</p>";
         }
         ?>
-
+    </div>
+    
     <section class="chamada-review">
     <h2>Também quer participar?</h2>
     <p>Compartilhe sua opinião sobre um livro que marcou sua leitura.</p>
