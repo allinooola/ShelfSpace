@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,11 +22,11 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lidos.html">Lidos</a></li>
-            <li><a href="lista.html">Lista de leitura</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="about.html">Sobre</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="lidos.php">Lidos</a></li>
+            <li><a href="lista.php">Lista de leitura</a></li>
+            <li><a href="reviews.php">Reviews</a></li>
+            <li><a href="about.php">Sobre</a></li>
             <li><a href="#" class="nav-conta">Minha Conta</a></li>
         </ul>
     </nav>

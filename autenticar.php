@@ -25,20 +25,12 @@ if (mysqli_num_rows($resultado) == 1) {
         $_SESSION["tipo"]        = $usuario["tipo"];
 
         // Redireciona para a página inicial
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
 
-    } else {
-        // Senha errada: volta para o login com erro
-        header("Location: login.php?erro=senha_invalida");
-        exit();
     }
-
-} else {
-    // Email não encontrado — volta para o login com erro
-    header("Location: login.php?erro=usuario_nao_encontrado");
-    exit();
 }
-
-mysqli_close($conexao);
+        // Se o login falhar, redireciona de volta para a página de login com uma mensagem de erro
+        header("Location: login.php?erro=senha_ou_email_invalido");
+        exit();
 ?>
