@@ -683,14 +683,11 @@ footer{
     font-size: 14px;
     color: #8a8a8a;
     font-style: italic;
-    margin: 0;
 }
 
 .review-card p{
     margin: 0;
-    font-size: 15px;
     line-height: 1.5;
-    color: #333;
 }
 
 .review-por{
@@ -699,6 +696,28 @@ footer{
     color: #744E2F;
     font-weight: bold;
 }
+
+.review-card-acoes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.editar-review a,
+.deletar-review a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #744E2F;
+}
+
+.editar-review a:hover,
+.deletar-review a:hover{
+    opacity: 0.7;
+}
+
 .chamada-review{
     font: bold 16px 'Merriweather', serif;
     text-align: center;
@@ -706,7 +725,6 @@ footer{
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
-
 
 /* =========================
    FORM PHP (PÁGINA 4.1 porque é uma subpágina da página de reviews)

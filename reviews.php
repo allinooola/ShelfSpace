@@ -70,6 +70,11 @@ $resultado = mysqli_query($conexao, $sql);
                     <p><strong>Nota:</strong> <?php echo $estrelas; ?></p>
                     <p><?php echo nl2br(htmlspecialchars($review['comentario'])); ?></p>
                     <p class="review-por">Por: <?php echo htmlspecialchars($review['nome_usuario']); ?></p>
+                        <div class="review-card-acoes">
+                            <span class="editar-review">📝<a href="editarReview.php?id=<?php echo $review['id_review']; ?>">Editar</a></span>
+                            <span class="deletar-review">🗑️<a href="deletarReview.php?id=<?php echo $review['id_review']; ?>" 
+                                  class="btn-deletar" onclick="return confirm('Tem certeza de que deseja deletar esta review?')">Deletar</a></span>
+                        </div>
                 </div>
  
                 <?php
@@ -79,9 +84,10 @@ $resultado = mysqli_query($conexao, $sql);
             // Se não veio nenhuma linha, mostra uma mensagem em vez de nada
             echo "<p>Ainda não há reviews aprovadas por aqui. Seja a primeira a escrever uma!</p>";
         }
+        
         ?>
     </div>
-    
+
     <section class="chamada-review">
     <h2>Também quer participar?</h2>
     <p>Compartilhe sua opinião sobre um livro que marcou sua leitura.</p>
