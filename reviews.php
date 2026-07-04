@@ -8,7 +8,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
 require "conexao.php";
  
-$sql = "SELECT review.id_review, review.nome_livro, review.autor,
+$sql = "SELECT review.id_review, review.id_usuario, review.nome_livro, review.autor,
                review.nota, review.comentario, review.data_review,
                usuario.nome AS nome_usuario
         FROM review
@@ -62,21 +62,34 @@ $resultado = mysqli_query($conexao, $sql);
  
                 // Transforma a nota (número, ex: 4) em estrelinhas ⭐⭐⭐⭐
                 $estrelas = str_repeat("⭐", $review['nota']);
-                ?>
+        ?>
  
                 <div class="review-card">
+                    <!-- exibe uma review vinda do banco de dados -->
                     <h3><?php echo htmlspecialchars($review['nome_livro']); ?></h3>
                     <p class="review-autor-livro"><?php echo htmlspecialchars($review['autor']); ?></p>
                     <p><strong>Nota:</strong> <?php echo $estrelas; ?></p>
+                    <!-- nlbr para manter o comentario bonitinho com quebras de linha -->
                     <p><?php echo nl2br(htmlspecialchars($review['comentario'])); ?></p>
                     <p class="review-por">Por: <?php echo htmlspecialchars($review['nome_usuario']); ?></p>
+
+                    <?php if ($review['id_usuario'] == $_SESSION['id_usuario']) { ?>
                         <div class="review-card-acoes">
-                            <span class="editar-review">📝<a href="editarReview.php?id=<?php echo $review['id_review']; ?>">Editar</a></span>
-                            <span class="deletar-review">🗑️<a href="deletarReview.php?id=<?php echo $review['id_review']; ?>" 
-                                  class="btn-deletar" onclick="return confirm('Tem certeza de que deseja deletar esta review?')">Deletar</a></span>
+                            <span class="editar-review">
+                                📝 <a href="editarReview.php?id=<?php echo $review['id_review']; ?>">Editar</a>
+                            </span>
+
+                            <span class="deletar-review">
+                                🗑️ <a href="deletarReview.php?id=<?php echo $review['id_review']; ?>"
+                                    onclick="return confirm('Tem certeza de que deseja deletar esta review?')">
+                                    Deletar
+                                </a>
+                            </span>
                         </div>
+                    <?php } ?>
+
+
                 </div>
- 
                 <?php
             }
  
