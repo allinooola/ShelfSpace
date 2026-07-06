@@ -8,25 +8,11 @@ if (!isset($_SESSION['id_usuario'])) {
 
 require "conexao.php";
 
-
-// BUSCA A REVIEW 
-if (isset($_GET['id'])) {
-    $id_review = $_GET['id'];
-    // Faz uma procura no banco de dados para pegar o id_usuario da review
-    $sql = "SELECT * FROM review WHERE id_review = $id_review";
-    $resultado = mysqli_query($conexao, $sql);
-    $review = mysqli_fetch_assoc($resultado);
-
-    if ($review && $review['id_usuario'] == $_SESSION['id_usuario']) {
-            header("Location: reviews.php");
-            exit();
-        }
-
-}
 // PROCESSO DE SALVAR A REVIEW EDITADA
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // Recebendo os dados do formulário
     $id_review = $_POST['id_review'];
     $nome_livro = $_POST['livro'];
     $autor = $_POST['autor'];
@@ -34,17 +20,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nota = $_POST['nota'];
     $comentario = $_POST['review'];
 
+    // Verificando se pertence ao usuário logado
+    $sql = "SELECT id_usuario FROM review WHERE id_review = $id_review";
+    $resultado = mysqli_query($conexao, $sql);
+    $review = mysqli_fetch_assoc($resultado);
+
+    if (!$review || $review['id_usuario'] != $_SESSION['id_usuario']) {
+        header("Location: reviews.php");
+        exit();
+    }
+
+    // Agora sim atualizando a review no banco de dados
     $sql = "UPDATE review
             SET nome_livro = '$nome_livro',
                 autor = '$autor',
                 genero = '$genero',
                 nota = '$nota',
                 comentario = '$comentario'
-            WHERE id_review = $id_review
-            AND id_usuario = ".$_SESSION['id_usuario'];
+            WHERE id_review = $id_review";
 
     mysqli_query($conexao, $sql);
-
     header("Location: reviews.php");
     exit();
 }

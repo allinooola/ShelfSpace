@@ -76,7 +76,7 @@ $resultado = mysqli_query($conexao, $sql);
                     <?php if ($review['id_usuario'] == $_SESSION['id_usuario']) { ?>
                         <div class="review-card-acoes">
                             <span class="editar-review">
-                                📝 <a href="editarReview.php?id=<?php echo $review['id_review']; ?>">Editar</a>
+                                📝 <a href="form.php?id=<?php echo $review['id_review']; ?>">Editar</a>
                             </span>
 
                             <span class="deletar-review">
