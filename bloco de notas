@@ -12,33 +12,3 @@ review vai automaticamente para a pagina de reviews.php para ser listada como um
 
 
 colocar no index.php o "ola [nome] bem vindo ao shelfspace" personalizado de acordo com login
-
-
-
-
-form.php
-      │
-      ▼
-salvar_review.php
-      │
-      ▼
-INSERT no banco
-(status = 'pendente')
-      │
-      ▼
-review_enviada.php
-
-Então eu faria nesta ordem:
-
-Deixar o formulário em form.php.
-Criar salvar_review.php, que recebe os dados do formulário.
-Fazer o INSERT na tabela review.
-Redirecionar para uma página dizendo "Sua review foi enviada para análise".
-
-💡 Minha sugestão é que a gente faça isso bem parecido com o cadastro de usuário, porque você já entendeu aquela lógica. Vai ficar muito mais fácil e o código vai manter o mesmo padrão do resto do projeto.
-
-Acho que é a melhor sequência para não se perder.
-
-CONSIDERAR EXCLUIR O FORM.ACTION QUE EXIBE A REVIEW ESCRITA
-
-AJEITAR CSS DO REVIEWS PHP - SUBSTITUIR PELO FORM.ACTION
