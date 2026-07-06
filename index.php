@@ -178,19 +178,19 @@ if (!isset($_SESSION['id_usuario'])) {
     <div class="atalho">
         <h3> Reviews </h3>
         <p>Leia opiniões sobre livros já explorados </p>
-        <a href="reviews.html"> Ver Reviews </a>
+        <a href="reviews.php"> Ver Reviews </a>
     </div>
 
     <div class="atalho">
         <h3> Livros Favoritos</h3>
         <p> Conheça os livros que mais marcam essa biblioteca. </p>
-        <a href="lidos.html"> Ver Livros </a>
+        <a href="lidos.php"> Ver Livros </a>
     </div>
 
     <div class="atalho">
         <h3>Envie sua Review</h3>
         <p>Compartilhe sua opinião sobre uma leitura especial.</p>
-        <a href="form.html">Criar Review</a>
+        <a href="form.php">Criar Review</a>
     </div>
   
 </section>
