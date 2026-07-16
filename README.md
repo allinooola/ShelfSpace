@@ -36,6 +36,7 @@ TECNOLOGIAS UTILIZADAS
 - MySQL
 
 SEGURANÇA
+
 As senhas dos usuários são armazenadas utilizando criptografia por hash, garantindo maior segurança durante a autenticação.
 
 ## 📷 Algumas telas
